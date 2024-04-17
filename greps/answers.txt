@@ -1,14 +1,38 @@
 # Part 1
 ### a)
+grep -i "toise" forest/filescan_00.1 >> captured/instruction.txt
+grep -i "butt" forest/filescan_00.1 > captured/butterfree.txt
+grep -i "bulb" captured/instruction.txt > captured/bulbasaur.txt
+grep -i "beed" captured/instruction.txt > captured/beedrill.txt
 
+grep -i "izard" forest/filescan_00.2 > captured/charizard.txt
+grep -i "mander" forest/filescan_00.2 > captured/charmander.txt
+grep -i "meleon" forest/filescan_00.2 > captured/charmeleon.txt
 
+grep -i ^i. forest/filescan_00.3 > captured/ivysaur.txt
+grep -i "jig*" forest/filescan_00.3 > captured/jigglypuff.txt
+grep -i h$ forest/filescan_00.3 > captured/meowth.txt
+grep -i "pika" forest/filescan_00.3 > captured/pikachu.txt
+
+grep -i k$ forest/filescan_00.4 > captured/psyduck.txt
+grep -i "squi" forest/filescan_00.4 > captured/squirtle.txt
+grep -i ^v forest/filescan_00.4 > captured/venusaur.txt
+grep -i "^wa*" forest/filescan_00.4 > captured/wartortle.txt
+
+# Part 2
+
+### a)
+How many pokemon are there? Show your grep that you used to get to that number.
+15
+ls -l captured | grep "^-" | wc -l
 
 
 ### b)
-
-
-
-### c)
+Who are the three biggest pokemon? (number of lines) Show the grep that you used to get to the result.
+1. pikachu
+2. charizard
+3. beedrill
+find captured -type f -exec wc -l {} + | sort -rn | head -n 4
 
 
 
